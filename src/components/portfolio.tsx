@@ -58,10 +58,10 @@ const Portfolio = () => {
           <div className="carousel carousel-center  rounded-box max-w-6xl p-4">
             {allPortfolio?.map((portfolio) => (
               <div key={portfolio?.id} className="max-w-3xl">
-                <div className="carousel-item w-[300px] lg:w-[600px] flex flex-col">
+                <div className="carousel-item w-[300px] lg:w-[550px] flex flex-col">
                   <img
                     src={portfolio?.link}
-                    className="rounded-box w-[250px] lg:w-[550px]"
+                    className="rounded-box w-[250px] lg:w-[500px]"
                   />
                   <h1 className="text-[#c42d82] font-semibold mt-2">
                     {portfolio?.name}
