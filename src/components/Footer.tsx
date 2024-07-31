@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   FaCodeBranch,
@@ -5,10 +6,17 @@ import {
   FaInstagram,
   FaLinkedin,
 } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <div className="mt-20 pb-6 shadow-2xl  border-t-2 border-[#23131c] shadow-[#23131c]">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7 }}
+      viewport={{ once: true, amount: 0.3 }}
+      className="mt-20 pb-6 shadow-2xl  border-t-2 border-[#23131c] shadow-[#23131c]"
+    >
       <footer className="footer text-white p-10">
         <aside>
           <svg
@@ -59,7 +67,7 @@ const Footer = () => {
           <FaLinkedin className="text-3xl " />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

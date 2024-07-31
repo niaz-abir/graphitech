@@ -1,14 +1,11 @@
+"use client";
 import Image from "next/image";
-
 import image from "../../public/images/hero.jpg";
 
 export function Banner() {
   return (
     <section>
-      <div
-        className="grid backdrop-blur-xl p-6 rounded-md 
- grid-cols-1 mt-14  items-center justify-items-center md:grid-cols-2"
-      >
+      <div className="grid backdrop-blur-xl p-6 rounded-md grid-cols-1 mt-10 items-center justify-items-center md:grid-cols-2">
         <div className="flex flex-col items-center gap-y-5 text-center md:items-start md:text-start">
           <h1 className="text-[clamp(2rem,_4vw+1rem,_4rem)] font-extrabold capitalize leading-tight tracking-tight">
             We craft digital marketing that converts!
@@ -27,13 +24,15 @@ export function Banner() {
             </button>
           </div>
         </div>
-        <Image
-          src={image}
-          alt="Hero"
-          className="rounded-md"
-          height="600"
-          width="600"
-        />
+        <div>
+          <Image
+            src={image}
+            alt="Hero"
+            className="rounded-md"
+            height="600"
+            width="600"
+          />
+        </div>
       </div>
     </section>
   );

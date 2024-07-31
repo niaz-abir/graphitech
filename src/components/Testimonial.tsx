@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 
 const Testimonial = () => {
   return (
@@ -16,7 +18,13 @@ const Testimonial = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-5 w-full">
-            <div className="border p-7 rounded-xl bg-[#381f2d] drop-shadow-md border-neutral-800/50 col-span-2 flex flex-col gap-y-10 justify-between">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="border p-7 rounded-xl bg-[#381f2d] drop-shadow-md border-neutral-800/50 col-span-2 flex flex-col gap-y-10 justify-between"
+            >
               <div className="flex flex-col gap-y-3.5">
                 <p className="font-bold text-xl text-white">
                   Efficient customer support
@@ -40,8 +48,14 @@ const Testimonial = () => {
                   Marketing Manager at ABC Company
                 </p>
               </div>
-            </div>
-            <div className="border p-7 rounded-xl bg-[#381f2d] drop-shadow-md border-neutral-800/50 col-span-3 flex flex-col gap-y-10 justify-between">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="border p-7 rounded-xl bg-[#381f2d] drop-shadow-md border-neutral-800/50 col-span-3 flex flex-col gap-y-10 justify-between"
+            >
               <div className="flex flex-col gap-y-3.5">
                 <p className="font-bold text-xl text-white">
                   Excellent product features
@@ -64,8 +78,14 @@ const Testimonial = () => {
                   CEO at XYZ Corporation
                 </p>
               </div>
-            </div>
-            <div className="border p-7 rounded-xl bg-[#381f2d] drop-shadow-md border-neutral-800/50 col-span-3 flex flex-col gap-y-10 justify-between">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="border p-7 rounded-xl bg-[#381f2d] drop-shadow-md border-neutral-800/50 col-span-3 flex flex-col gap-y-10 justify-between"
+            >
               <div className="flex flex-col gap-y-3.5">
                 <p className="font-bold text-xl text-white">
                   Seamless integration process
@@ -89,8 +109,14 @@ const Testimonial = () => {
                   CTO at XYZ Corporation
                 </p>
               </div>
-            </div>
-            <div className="border p-7 rounded-xl bg-[#381f2d] drop-shadow-md border-neutral-800/50 col-span-2 flex flex-col gap-y-10 justify-between">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="border p-7 rounded-xl bg-[#381f2d] drop-shadow-md border-neutral-800/50 col-span-2 flex flex-col gap-y-10 justify-between"
+            >
               <div className="flex flex-col gap-y-3.5">
                 <p className="font-bold text-xl text-white">
                   Reliable service uptime
@@ -113,7 +139,7 @@ const Testimonial = () => {
                   COO at XYZ Corporation
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
       </div>

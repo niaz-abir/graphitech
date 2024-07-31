@@ -1,4 +1,8 @@
+/* eslint-disable react/no-unescaped-entities */
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Pricing = () => {
   return (
@@ -13,7 +17,13 @@ const Pricing = () => {
           </h2>
         </div>
         <div className="flex flex-wrap items-stretch -mx-4 p-4">
-          <div className="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0 ">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true, amount: 0.6 }}
+            className="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0 "
+          >
             <div className="flex flex-grow flex-col p-6 space-y-6 rounded shadow sm:p-8 bg-[#381f2d]">
               <div className="space-y-2">
                 <h4 className="text-2xl font-bold">Beginner</h4>
@@ -73,11 +83,17 @@ const Pricing = () => {
                 </li>
               </ul>
               <button className="w-full h-14 btn-outline border-none duration-300 rounded-md text-[18px] text-white font-bold hover:bg-[#23131c] bg-[#532a41]">
-                Get Start
+                <Link href="contact-us">Let's Talk</Link>
               </button>
             </div>
-          </div>
-          <div className="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true, amount: 0.6 }}
+            className="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0"
+          >
             <div className="flex flex-grow flex-col p-6 space-y-6 rounded shadow sm:p-8 dark:bg-violet-600 bg-[#88205b]">
               <div className="space-y-2">
                 <h4 className="text-2xl font-bold">Pro</h4>
@@ -152,11 +168,17 @@ const Pricing = () => {
                 </li>
               </ul>
               <button className="w-full h-14 btn-outline border-none duration-300 rounded-md text-[18px] text-white font-bold hover:bg-[#23131c] bg-[#b12c77]">
-                Get Start
+                <Link href="contact-us">Let's Talk</Link>
               </button>
             </div>
-          </div>
-          <div className="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true, amount: 0.6 }}
+            className="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0"
+          >
             <div className="flex flex-grow flex-col p-6 space-y-6 rounded shadow sm:p-8 bg-[#381f2d]">
               <div className="space-y-2">
                 <h4 className="text-2xl font-bold">Team</h4>
@@ -246,10 +268,10 @@ const Pricing = () => {
                 </li>
               </ul>
               <button className="w-full h-14 btn-outline border-none duration-300 rounded-md text-[18px] text-white font-bold hover:bg-[#23131c] bg-[#532a41]">
-                Get Start
+                <Link href="contact-us">Let's Talk</Link>
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

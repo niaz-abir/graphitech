@@ -3,6 +3,7 @@
 
 "use client";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const Portfolio = () => {
   const allPortfolio = [
@@ -47,13 +48,20 @@ const Portfolio = () => {
   return (
     <section className="mt-14 bg-[#23131c] p-8 rounded-md ">
       <div className="text-center pb-6">
-        <h1 className="font-bold text-center text-4xl pb-2">Latest Project</h1>
+        <h1 className="font-bold text-center pt-6 text-4xl pb-6">
+          Latest Project
+        </h1>
         <p className="text-gray-400 text-[18px]">
           Watch our latest project and except your hope you can enjoy.
         </p>
       </div>
 
-      <div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9 }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <div className="hidden lg:block">
           <div className="carousel carousel-center  rounded-box max-w-6xl p-4">
             {allPortfolio?.map((portfolio) => (
@@ -72,9 +80,15 @@ const Portfolio = () => {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="lg:hidden block">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9 }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="lg:hidden block"
+      >
         <div className="carousel carousel-vertical rounded-box h-96">
           {allPortfolio?.map((portfolio) => (
             <div key={portfolio?.id}>
@@ -88,7 +102,7 @@ const Portfolio = () => {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
 
       {/* <div className="flex justify-center mt-4">
         <button className="w-28 h-14 btn-outline border-none rounded-md text-[18px] text-white font-bold hover:bg-[#23131c] bg-[#532a41]">

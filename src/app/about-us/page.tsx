@@ -1,13 +1,16 @@
+/* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 import React from "react";
 import image from "../../../public/images/hero.jpg";
+import Link from "next/link";
+import { MdOutlineWavingHand } from "react-icons/md";
 const AboutUs = () => {
   return (
     <section className="max-w-6xl pb-14 mx-auto mt-6">
-      <h1 className="font-bold text-5xl pb-6">About us</h1>
+      <h1 className="font-bold text-5xl pl-4 lg:pl-0 pb-6">About us</h1>
 
       <div>
-        <p className="text-[1.25rem] leading-relaxed text-foreground/80">
+        <p className="lg:text-[1.25rem] text-[1rem] p-4 leading-relaxed text-foreground/80">
           <span className="font-semibold">Graphitech</span> distinguishes itself
           as more than a digital agency by employing innovators, creators and
           strategists who are committed to propelling your brand forward in the
@@ -16,7 +19,7 @@ const AboutUs = () => {
           tailored to enhance the online visibility and interaction of your
           brand.
         </p>
-        <p className="text-[1.25rem] mt-8 leading-relaxed text-foreground/80">
+        <p className="lg:text-[1.25rem] text-[1rem] mt-8 p-4 leading-relaxed text-foreground/80">
           Distinguishes itself as more than a digital agency by employing
           innovators, creators and strategists who are committed to propelling
           your brand forward in the digital era. With a founding principle of
@@ -56,8 +59,10 @@ const AboutUs = () => {
               </p>
 
               <div className="mt-8">
-                <button className="w-28 h-14 btn-outline border-none rounded-md text-[18px] text-white font-bold hover:bg-[#23131c] bg-[#532a41]">
-                  contact us
+                <button className="w-32 pl-2 h-14 btn-outline border-none rounded-md text-[18px] text-white font-bold  hover:bg-[#23131c] bg-[#88205b]">
+                  <Link href="contact-us" className="flex gap-2 items-center">
+                    Let's Talk <MdOutlineWavingHand />
+                  </Link>
                 </button>
               </div>
             </div>
@@ -65,7 +70,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="flex gap-4 items-center mt-24">
+      <div className="flex flex-col p-4 lg:flex-row gap-4 items-center mt-24">
         <div className="shadow-xl shadow-[#23131c] px-6 py-10 border-l-2 border-gray-600">
           <h1 className="font-bold text-2xl pb-4  ">Our Goal</h1>
           <p>
