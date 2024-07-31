@@ -65,7 +65,7 @@ export default function ConnectCompany() {
         className="grid grid-cols-1 p-6 items-center gap-10 lg:grid-cols-2"
       >
         <motion.div variants={textVariants}>
-          <h1 className="text-5xl font-bold pb-8">
+          <h1 className="text-3xl lg:text-5xl font-bold pb-8">
             Collaborating With Top Industry Experts!
           </h1>
           <p className="text-gray-400">

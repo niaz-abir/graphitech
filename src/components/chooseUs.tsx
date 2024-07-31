@@ -68,7 +68,7 @@ const ChooseUs = () => {
   };
 
   return (
-    <section className="mt-24">
+    <section className="mt-16">
       <h1 className="font-bold text-center text-4xl">Why Choose us?</h1>
       <p className=" pb-8 pt-2 text-gray-400 text-center">
         We have lot of support form us .You can watch it and discuss with us.

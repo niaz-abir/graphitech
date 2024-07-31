@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Pricing = () => {
   return (
-    <section className="py-20 dark:bg-gray-100 dark:text-gray-800">
+    <section className="py-26 mt-8 dark:bg-gray-100 dark:text-gray-800">
       <div className="container px-4 mx-auto">
         <div className="max-w-2xl mx-auto mb-16 text-center">
           <span className="font-bold tracking-wider uppercase text-gray-400">
