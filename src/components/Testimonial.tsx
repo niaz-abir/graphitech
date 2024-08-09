@@ -8,7 +8,7 @@ const Testimonial = () => {
     <section>
       <section className="max-w-5xl mx-auto w-full px-10 py-10">
         <div className="flex items-center justify-center flex-col mb-8 gap-y-2 py-5">
-          <h2 className="text-2xl  md:text-3xl lg:text-5xl font-bold  text-center text-white">
+          <h2 className="text-2xl lg:text-4xl font-bold  text-center text-white">
             Heres what our
             <span className="text-pink-400"> customers</span> have to say
           </h2>
