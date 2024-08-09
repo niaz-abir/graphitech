@@ -92,7 +92,7 @@ const Navbar = () => {
                   href="tel:+880263627"
                   className="p-2 flex items-center gap-2 text-[20px] lg:w-full bg-[#88205b] w-44 text-white rounded md:border-0"
                 >
-                  <MdOutlinePermPhoneMsg /> +880263627
+                  <MdOutlinePermPhoneMsg /> +1 716 406 7972
                 </a>
               </li>
             </ul>
@@ -102,7 +102,7 @@ const Navbar = () => {
       {isScrolled && (
         <div className="fixed bottom-10 right-10 z-50">
           <a
-            href="https://wa.me/01877487352"
+            href="https://wa.me/+8801617775672"
             target="_blank"
             rel="noopener noreferrer"
             className=" p-3 rounded-full shadow-lg text-white"

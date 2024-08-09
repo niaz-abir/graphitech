@@ -16,7 +16,7 @@ const Services = () => {
       no: "01",
       icon: <FaPhotoVideo />,
       details:
-        "Its a great service from us .We can do our best hopefully everyone can do it easily .Thank you for taking services",
+        "Transform raw footage into polished videos with expert editing, tailored to your needs. Professional results, every time.",
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ const Services = () => {
       no: "02",
       icon: <RiWebhookLine />,
       details:
-        "Its a great service from us .We can do our best hopefully everyone can do it easily .Thank you for taking services",
+        "Build custom, responsive websites tailored to your business. From design to deployment, we create web solutions that drive success.",
     },
     {
       id: 3,
@@ -32,7 +32,7 @@ const Services = () => {
       no: "03",
       icon: <IoIosApps />,
       details:
-        "Its a great service from us .We can do our best hopefully everyone can do it easily .Thank you for taking services",
+        "Create custom, user-friendly apps that meet your business needs. From concept to launch, we build mobile solutions that engage and perform.",
     },
     {
       id: 4,
@@ -40,7 +40,7 @@ const Services = () => {
       no: "04",
       icon: <GrAppsRounded />,
       details:
-        "Its a great service from us .We can do our best hopefully everyone can do it easily .Thank you for taking services",
+        "Stunning visuals that capture attention and convey your message. From logos to marketing materials, we design for impact and clarity.",
     },
     {
       id: 5,
@@ -48,7 +48,7 @@ const Services = () => {
       no: "05",
       icon: <TfiWrite />,
       details:
-        "Its a great service from us .We can do our best hopefully everyone can do it easily .Thank you for taking services",
+        "Boost your brand with targeted online strategies. From SEO to social media, we drive growth and enhance your digital presence.",
     },
     {
       id: 6,
@@ -56,7 +56,7 @@ const Services = () => {
       no: "06",
       icon: <VscGraph />,
       details:
-        "Its a great service from us .We can do our best hopefully everyone can do it easily .Thank you for taking services",
+        "Create a strong, memorable brand identity. We craft strategies and visuals that define your brand and connect with your audience effectively.",
     },
   ];
 
@@ -65,8 +65,9 @@ const Services = () => {
       <div className="text-center mb-14 mt-14 p-4">
         <h1 className="font-bold text-center text-4xl">Our Services</h1>
         <p className="text-[18px] text-gray-400">
-          We always try to give our best services at the moment. There are a lot
-          of services here.
+          From enhancing your digital presence to creating impactful designs, we
+          provide <br />
+          solutions that drive business growth.
         </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">

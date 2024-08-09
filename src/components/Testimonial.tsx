@@ -29,9 +29,8 @@ const Testimonial = () => {
                 Efficient customer support
               </p>
               <p className="font-medium text-white">
-                The customer support team at our service is incredibly
-                responsive and helpful. They went above and beyond to assist me
-                with my issue.
+                Exceptional service and support! The team quickly resolved our
+                IT issues and provided invaluable advice. Highly recommend!
               </p>
             </div>
             <div className="flex flex-col">
@@ -44,7 +43,7 @@ const Testimonial = () => {
                 Emily Smith
               </p>
               <p className="text-sm font-medium text-slate-100/70">
-                Marketing Manager at ABC Company
+                Marketing Manager at Vivid Horizons
               </p>
             </div>
           </motion.div>
@@ -60,8 +59,9 @@ const Testimonial = () => {
                 Excellent product features
               </p>
               <p className="font-medium text-white">
-                The features offered by our service are outstanding. They have
-                greatly improved our workflow and efficiency.
+                Professional, reliable, and knowledgeable. They transformed our
+                IT infrastructure seamlessly and improved our overall
+                efficiency.
               </p>
             </div>
             <div className="flex flex-col">
@@ -74,7 +74,7 @@ const Testimonial = () => {
                 Michael Johnson
               </p>
               <p className="text-sm font-medium text-slate-100/70">
-                CEO at XYZ Corporation
+                CEO at Apex Dynamics
               </p>
             </div>
           </motion.div>
@@ -90,9 +90,8 @@ const Testimonial = () => {
                 Seamless integration process
               </p>
               <p className="font-medium text-white">
-                Integrating our systems with our service was smooth and
-                hassle-free. The support team guided us through every step of
-                the process.
+                Fantastic experience! Their expertise in web development and
+                digital marketing significantly boosted our online presence.
               </p>
             </div>
             <div className="flex flex-col">
@@ -105,7 +104,7 @@ const Testimonial = () => {
                 Sarah Brown
               </p>
               <p className="text-sm font-medium text-slate-100/70">
-                CTO at XYZ Corporation
+                CTO at NexEra Ventures
               </p>
             </div>
           </motion.div>
@@ -121,8 +120,8 @@ const Testimonial = () => {
                 Reliable service uptime
               </p>
               <p className="font-medium text-white">
-                Our service has consistently maintained high uptime, ensuring
-                that our operations run smoothly without any disruptions.
+                Outstanding service! They delivered high-quality web development
+                and provided excellent ongoing support. Worth every penny!
               </p>
             </div>
             <div className="flex flex-col">
@@ -135,7 +134,7 @@ const Testimonial = () => {
                 James White
               </p>
               <p className="text-sm font-medium text-slate-100/70">
-                COO at XYZ Corporation
+                COO at clipse Enterprises
               </p>
             </div>
           </motion.div>

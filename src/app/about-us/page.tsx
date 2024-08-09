@@ -52,10 +52,10 @@ const AboutUs = () => {
                 Meet Our Team
               </h2>
               <p className="mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                Ready to see how we can work together? Meet our team to discuss
+                your needs and explore how our solutions can drive your success.
+                We'll tailor our approach to your goals and work towards
+                exceptional results together.
               </p>
 
               <div className="mt-8">
@@ -74,21 +74,20 @@ const AboutUs = () => {
         <div className="shadow-xl shadow-[#23131c] px-6 py-10 border-l-2 border-gray-600">
           <h1 className="font-bold text-2xl pb-4  ">Our Goal</h1>
           <p>
-            To revolutionize the industry by crafting brand stories that
-            inspire, engage, and forge deep connections with people. Our mission
-            is to create memorable narratives that resonate on an emotional
-            level, driving meaningful engagement and testing.Thank you very
-            much.We will create great memory.
+            Our goal is to deliver exceptional solutions tailored to your needs,
+            ensuring success through innovation and dedicated support. We are
+            committed to understanding your unique challenges and exceeding your
+            expectations, driving growth and long-term success for your
+            business.
           </p>
         </div>
         <div className="shadow-xl shadow-[#23131c] px-6 py-10 border-l-2 border-gray-500">
           <h1 className="font-bold text-2xl pb-4">Our Mission</h1>
           <p>
-            To revolutionize the industry by crafting brand stories that
-            inspire, engage, and forge deep connections with people. Our mission
-            is to create memorable narratives that resonate on an emotional
-            level, driving meaningful engagement and testing.Thank you very
-            much.We will create great memory.
+            Our mission is to empower your business with innovative, tailored IT
+            solutions that drive efficiency and growth. We are dedicated to
+            providing exceptional service and support, ensuring your success
+            through every challenge and opportunity.
           </p>
         </div>
       </div>

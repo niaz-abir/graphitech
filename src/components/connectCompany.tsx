@@ -1,11 +1,21 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 import React from "react";
-import image1 from "../../public/images/logo-3.webp";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { MdOutlineWavingHand } from "react-icons/md";
 import Link from "next/link";
+import image1 from "../../public/images/logo (10).png";
+import image3 from "../../public/images/logo (2).jpg";
+import image5 from "../../public/images/logo (8).png";
+import image6 from "../../public/images/logo (3).jpg";
+import image7 from "../../public/images/logo (3).png";
+import image9 from "../../public/images/logo (6).jpg";
+import image10 from "../../public/images/logo (6).png";
+import image11 from "../../public/images/logo (9).png";
+import image12 from "../../public/images/logo (7).png";
+import image13 from "../../public/images/logo (8).png";
+import image14 from "../../public/images/logo (9).png";
 
 export default function ConnectCompany() {
   const allCompany = [
@@ -13,37 +23,41 @@ export default function ConnectCompany() {
       id: 1,
       image: image1,
     },
+
     {
-      id: 1,
-      image: image1,
+      id: 2,
+      image: image3,
     },
     {
-      id: 1,
-      image: image1,
+      id: 3,
+      image: image6,
+    },
+
+    {
+      id: 4,
+      image: image10,
+    },
+
+    {
+      id: 5,
+      image: image12,
+    },
+
+    {
+      id: 6,
+      image: image9,
     },
     {
-      id: 1,
-      image: image1,
+      id: 7,
+      image: image5,
     },
     {
-      id: 1,
-      image: image1,
+      id: 8,
+      image: image11,
     },
     {
-      id: 1,
-      image: image1,
-    },
-    {
-      id: 1,
-      image: image1,
-    },
-    {
-      id: 1,
-      image: image1,
-    },
-    {
-      id: 1,
-      image: image1,
+      id: 9,
+      image: image7,
     },
   ];
   const textVariants = {
@@ -85,13 +99,16 @@ export default function ConnectCompany() {
           className="grid grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {allCompany?.map((company) => (
-            <div key={company?.id}>
+            <div
+              key={company?.id}
+              className="lg:bg-[#381f2d] object-cover object-center bg-none"
+            >
               <Image
                 src={company?.image}
                 alt=""
                 height={100}
                 width={120}
-                className="object-fit object-center  min-w-[10rem]"
+                className="object-fit object-center   min-w-[170px]"
               ></Image>
             </div>
           ))}
