@@ -1,6 +1,25 @@
+/* eslint-disable react/no-unescaped-entities */
+"use client";
 import React from "react";
+import { useForm, SubmitHandler } from "react-hook-form";
+
+type TInput = {
+  name: string;
+  email: string;
+  message: string;
+};
 
 const ContactUs = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<TInput>();
+
+  const onSubmit: SubmitHandler<TInput> = (data) => {
+    console.log(data);
+  };
+
   return (
     <section>
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-4 lg:py-8">
@@ -113,61 +132,82 @@ const ContactUs = () => {
                 </li>
               </ul>
             </div>
-            <div className="card h-fit max-w-6xl p-5 md:p-8" id="form">
-              <div className="min-h-screen bg-[#392b33] rounded-md py-2 flex flex-col justify-center sm:py-12">
-                <div className="relative py-3 sm:max-w-xl sm:mx-auto">
-                  <div className="absolute inset-0 bg-gradient-to-r from-pink-800 to-pink-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
-                  <div className="text-white relative px-2 py-6 bg-[#23131c] shadow-lg sm:rounded-3xl sm:p-16">
-                    <div className="text-center pb-6">
-                      <h1 className="text-3xl">Contact Us!</h1>
 
-                      <p className="text-gray-300">
-                        Fill up the form below to send us a message.
-                      </p>
-                    </div>
+            <div>
+              <div className="text-white relative px-2 p-4 bg-[#23131c] shadow-lg sm:rounded-3xl sm:p-16">
+                <div className="text-center pb-4 -mt-4 ">
+                  <h1 className="text-3xl font-bold">Contact Us!</h1>
 
-                    <form>
-                      <input
-                        className="shadow mb-4 bg-[#44363e] text-white border-none appearance-none  rounded w-full py-2 px-3  leading-tight focus:outline-none focus:shadow-outline"
-                        type="text"
-                        placeholder="Name"
-                        name="name"
-                      />
-
-                      <input
-                        className="shadow mb-4 appearance-none border-none rounded w-full py-2 px-3 bg-[#44363e] text-white leading-tight focus:outline-none focus:shadow-outline"
-                        type="email"
-                        placeholder="Email"
-                        name="email"
-                      />
-
-                      <input
-                        className="shadow mb-4 appearance-none border-none rounded w-full py-2 px-3 bg-[#44363e] text-white leading-tight focus:outline-none focus:shadow-outline"
-                        type="text"
-                        placeholder="Subject"
-                        name="_subject"
-                      />
-
-                      <textarea
-                        className="shadow mb-4 min-h-0 appearance-none border-none rounded h-32 w-full py-2 px-3 bg-[#44363e] text-white leading-tight focus:outline-none focus:shadow-outline"
-                        placeholder="Type your message here..."
-                        name="message"
-                      ></textarea>
-
-                      <div className="flex justify-between">
-                        <input
-                          className="shadow bg-pink-700   text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                          type="submit"
-                          value="Send ➤"
-                        />
-                        <input
-                          className="shadow bg-pink-700 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                          type="reset"
-                        />
-                      </div>
-                    </form>
-                  </div>
+                  <p className="text-gray-300">
+                    Fill up the form below to send us a message.
+                  </p>
                 </div>
+
+                <form onSubmit={handleSubmit(onSubmit)}>
+                  <label className="form-control w-full max-w-xs">
+                    <div className="label">
+                      <span className="text-white">Name:</span>
+                    </div>
+                    <input
+                      type="text"
+                      placeholder="name"
+                      className={`input input-bordered bg-[#44363e] w-[450px] ${
+                        errors.name ? "border-red-500" : ""
+                      }`}
+                      {...register("name", { required: "Name is required" })}
+                    />
+                  </label>
+                  {errors.name && (
+                    <p className="text-red-500 text-sm">
+                      {errors.name.message}
+                    </p>
+                  )}
+
+                  <label className="form-control w-full max-w-xs">
+                    <div className="label">
+                      <span className="text-white">Email:</span>
+                    </div>
+                    <input
+                      required
+                      type="text"
+                      placeholder="email"
+                      className={`input input-bordered bg-[#44363e] w-[450px] ${
+                        errors.email ? "border-red-500" : ""
+                      }`}
+                      {...register("email", { required: "email is required" })}
+                    />
+                  </label>
+                  {errors.email && (
+                    <p className="text-red-500 text-sm">
+                      {errors.email.message}
+                    </p>
+                  )}
+                  <label className="form-control">
+                    <div className="label">
+                      <span className="text-white ">Message:</span>
+                    </div>
+                    <textarea
+                      className={` textarea textarea-bordered h-24  bg-[#44363e] w-[450px] ${
+                        errors.name ? "border-red-500" : ""
+                      }`}
+                      {...register("message", {
+                        required: "message is required",
+                      })}
+                      placeholder="message"
+                    ></textarea>
+                  </label>
+                  {errors.message && (
+                    <p className="text-red-500 text-sm">
+                      {errors.message.message}
+                    </p>
+                  )}
+
+                  <div className="mt-4 mb-4">
+                    <button className="w-[450px] h-14 btn-outline border-none duration-300 rounded-md text-[18px] text-white font-bold hover:bg-[#23131c] bg-[#532a41]">
+                      Submit
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
