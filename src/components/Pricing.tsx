@@ -33,7 +33,8 @@ const Pricing = () => {
                 </span>
               </div>
               <p className="mt-3 leading-relaxed dark:text-gray-600">
-                Etiam ac convallis enim, eget euismod doloro.
+                Unlock advanced features with the beginner Plan, offering
+                enhanced performance and priority support.
               </p>
               <ul className="flex-1 mb-6 dark:text-gray-600">
                 <li className="flex mb-2 space-x-2">
@@ -49,7 +50,7 @@ const Pricing = () => {
                       clipRule="evenodd"
                     ></path>
                   </svg>
-                  <span>Aenean quis</span>
+                  <span>Customizable Solutions</span>
                 </li>
                 <li className="flex mb-2 space-x-2">
                   <svg
@@ -64,7 +65,7 @@ const Pricing = () => {
                       clipRule="evenodd"
                     ></path>
                   </svg>
-                  <span>Morbi semper</span>
+                  <span>Regular Updates</span>
                 </li>
                 <li className="flex mb-2 space-x-2">
                   <svg
@@ -79,7 +80,7 @@ const Pricing = () => {
                       clipRule="evenodd"
                     ></path>
                   </svg>
-                  <span>Tristique enim nec</span>
+                  <span>Priority Support</span>
                 </li>
               </ul>
               <button className="w-full h-14 btn-outline border-none duration-300 rounded-md text-[18px] text-white font-bold hover:bg-[#23131c] bg-[#532a41]">
@@ -103,7 +104,8 @@ const Pricing = () => {
                 </span>
               </div>
               <p className="leading-relaxed">
-                Morbi cursus ut sapien sit amet consectetur.
+                Upgrade to the Pro Plan for enhanced features and advanced
+                support tailored for growing businesses.
               </p>
               <ul className="flex-1 space-y-2">
                 <li className="flex items-center space-x-2">
@@ -119,7 +121,7 @@ const Pricing = () => {
                       clipRule="evenodd"
                     ></path>
                   </svg>
-                  <span>Everything in Free</span>
+                  <span>Exclusive Updates</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <svg
@@ -134,7 +136,7 @@ const Pricing = () => {
                       clipRule="evenodd"
                     ></path>
                   </svg>
-                  <span>Phasellus tellus</span>
+                  <span>Increased Flexibility</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <svg
@@ -149,7 +151,7 @@ const Pricing = () => {
                       clipRule="evenodd"
                     ></path>
                   </svg>
-                  <span>Praesent faucibus</span>
+                  <span>Enhanced Customization</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <svg
@@ -164,7 +166,7 @@ const Pricing = () => {
                       clipRule="evenodd"
                     ></path>
                   </svg>
-                  <span>Aenean et lectus blandit</span>
+                  <span>Advanced Features</span>
                 </li>
               </ul>
               <button className="w-full h-14 btn-outline border-none duration-300 rounded-md text-[18px] text-white font-bold hover:bg-[#23131c] bg-[#b12c77]">
@@ -188,7 +190,9 @@ const Pricing = () => {
                 </span>
               </div>
               <p className="leading-relaxed dark:text-gray-600">
-                Phasellus ultrices bibendum nibh in vehicula.
+                The Advanced Plan offers a comprehensive suite of features
+                designed for enterprises needing robust solutions and top-tier
+                support.
               </p>
               <ul className="space-y-2 dark:text-gray-600">
                 <li className="flex items-start space-x-2">
@@ -204,7 +208,7 @@ const Pricing = () => {
                       clipRule="evenodd"
                     ></path>
                   </svg>
-                  <span>Everything in Pro</span>
+                  <span>Premium Support</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <svg
@@ -219,7 +223,7 @@ const Pricing = () => {
                       clipRule="evenodd"
                     ></path>
                   </svg>
-                  <span>Fusce sem ligula</span>
+                  <span>Unlimited Customization</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <svg
@@ -234,7 +238,7 @@ const Pricing = () => {
                       clipRule="evenodd"
                     ></path>
                   </svg>
-                  <span>Curabitur dictum</span>
+                  <span>Early Access</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <svg
@@ -249,7 +253,7 @@ const Pricing = () => {
                       clipRule="evenodd"
                     ></path>
                   </svg>
-                  <span>Duis odio eros</span>
+                  <span>Comprehensive Solutions</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <svg
@@ -264,7 +268,7 @@ const Pricing = () => {
                       clipRule="evenodd"
                     ></path>
                   </svg>
-                  <span>Vivamus ut lectus ex</span>
+                  <span>Advanced Features</span>
                 </li>
               </ul>
               <button className="w-full h-14 btn-outline border-none duration-300 rounded-md text-[18px] text-white font-bold hover:bg-[#23131c] bg-[#532a41]">

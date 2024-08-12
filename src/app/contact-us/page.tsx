@@ -1,23 +1,43 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { useForm, SubmitHandler } from "react-hook-form";
 
 type TInput = {
-  name: string;
-  email: string;
-  message: string;
+  user_name: string;
+  user_email: string;
+  user_message: string;
 };
 
 const ContactUs = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<TInput>();
+  const form = useRef<HTMLFormElement>(null);
 
   const onSubmit: SubmitHandler<TInput> = (data) => {
-    console.log(data);
+    // console.log(data);
+    if (form.current) {
+      emailjs
+        .sendForm("servicegraphitech", "template_ulg1uq6", form.current, {
+          publicKey: "B9eRXvIMGw4yENXED",
+        })
+        .then(
+          () => {
+            console.log("SUCCESS!");
+            reset();
+          },
+          (error: { text: any }) => {
+            console.log("FAILED...", error.text);
+          }
+        );
+    } else {
+      console.log("Form reference is null.");
+    }
   };
 
   return (
@@ -34,9 +54,11 @@ const ContactUs = () => {
           <div className="grid md:grid-cols-2">
             <div className="h-full pr-6 mt-8 ">
               <p className="mt-3 mb-12 text-lg text-white dark:text-slate-400">
-                className aptent taciti sociosqu ad litora torquent per conubia
-                nostra, per inceptos himenaeos. Duis nec ipsum orci. Ut
-                scelerisque sagittis ante, ac tincidunt sem venenatis ut.
+                We’d love to hear from you! Whether you have questions,
+                feedback, or need support, our team is here to help. Fill out
+                the form below, or reach out to us via phone or email. Your
+                satisfaction is our priority, and we’re committed to providing
+                you with excellent service.
               </p>
               <ul className="mb-6 md:mb-0">
                 <li className="flex">
@@ -62,10 +84,10 @@ const ContactUs = () => {
                       Our Address
                     </h3>
                     <p className="text-white dark:text-slate-400">
-                      1230 Maecenas Street Donec Road
+                      1300 Elmwood Avenue,
                     </p>
                     <p className="text-white dark:text-slate-400">
-                      New York, EEUU
+                      Buffalo, NY 14222, USA
                     </p>
                   </div>
                 </li>
@@ -93,10 +115,10 @@ const ContactUs = () => {
                       Contact
                     </h3>
                     <p className="text-white dark:text-slate-400">
-                      Mobile: +1 (123) 456-7890
+                      Mobile: +880263627
                     </p>
                     <p className="text-white dark:text-slate-400">
-                      Mail: tailnext@gmail.com
+                      Mail: graphitech.sales@gmail.com
                     </p>
                   </div>
                 </li>
@@ -125,14 +147,10 @@ const ContactUs = () => {
                     <p className="text-white dark:text-slate-400">
                       Monday - Friday: 08:00 - 17:00
                     </p>
-                    <p className="text-white dark:text-slate-400">
-                      Saturday &amp; Sunday: 08:00 - 12:00
-                    </p>
                   </div>
                 </li>
               </ul>
             </div>
-
             <div>
               <div className="text-white relative px-2 p-4 bg-[#23131c] shadow-lg sm:rounded-3xl sm:p-16">
                 <div className="text-center pb-4 -mt-4 ">
@@ -143,7 +161,7 @@ const ContactUs = () => {
                   </p>
                 </div>
 
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form ref={form} onSubmit={handleSubmit(onSubmit)}>
                   <label className="form-control w-full max-w-xs">
                     <div className="label">
                       <span className="text-white">Name:</span>
@@ -152,14 +170,16 @@ const ContactUs = () => {
                       type="text"
                       placeholder="name"
                       className={`input input-bordered bg-[#44363e] w-[450px] ${
-                        errors.name ? "border-red-500" : ""
+                        errors.user_name ? "border-red-500" : ""
                       }`}
-                      {...register("name", { required: "Name is required" })}
+                      {...register("user_name", {
+                        required: "Name is required",
+                      })}
                     />
                   </label>
-                  {errors.name && (
+                  {errors.user_name && (
                     <p className="text-red-500 text-sm">
-                      {errors.name.message}
+                      {errors.user_name.message}
                     </p>
                   )}
 
@@ -172,14 +192,16 @@ const ContactUs = () => {
                       type="text"
                       placeholder="email"
                       className={`input input-bordered bg-[#44363e] w-[450px] ${
-                        errors.email ? "border-red-500" : ""
+                        errors.user_email ? "border-red-500" : ""
                       }`}
-                      {...register("email", { required: "email is required" })}
+                      {...register("user_email", {
+                        required: "email is required",
+                      })}
                     />
                   </label>
-                  {errors.email && (
+                  {errors.user_email && (
                     <p className="text-red-500 text-sm">
-                      {errors.email.message}
+                      {errors.user_email.message}
                     </p>
                   )}
                   <label className="form-control">
@@ -188,17 +210,17 @@ const ContactUs = () => {
                     </div>
                     <textarea
                       className={` textarea textarea-bordered h-24  bg-[#44363e] w-[450px] ${
-                        errors.name ? "border-red-500" : ""
+                        errors.user_message ? "border-red-500" : ""
                       }`}
-                      {...register("message", {
+                      {...register("user_message", {
                         required: "message is required",
                       })}
                       placeholder="message"
                     ></textarea>
                   </label>
-                  {errors.message && (
+                  {errors.user_message && (
                     <p className="text-red-500 text-sm">
-                      {errors.message.message}
+                      {errors.user_message.message}
                     </p>
                   )}
 

@@ -4,44 +4,45 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Portfolio = () => {
   const allPortfolio = [
     {
       id: 1,
-      link: "https://i.ibb.co/HKQF7qb/Screenshot-2444.png",
-      name: "booknokery.com",
-      details: "A book selling website",
+      link: "https://i.ibb.co/FqKsh4F/Screenshot-2505.png",
+      name: "https://www.degikon.com/",
+      details: "A streamlined IT Solutions for Modern Businesses",
     },
     {
       id: 1,
-      link: "https://i.ibb.co/kgkjhtg/Screenshot-2445.png",
-      name: "innerrequire.com",
-      details: "Searching job website",
+      link: "https://i.ibb.co/gWHDjTk/Screenshot-2507.png",
+      name: "https://www.thrivenvision.studio/",
+      details: "Innovative IT Strategies, Simplified for Success",
     },
     {
       id: 1,
-      link: "https://i.ibb.co/6PBrwvM/Screenshot-2446.png",
-      name: "pizzazz.com",
-      details: "Finding your pizza",
+      link: "https://i.ibb.co/t8FdN0V/Screenshot-2511.png",
+      name: "https://aspire-academy.vercel.app/",
+      details: "Master Your Future with Aspire Academy",
     },
     {
       id: 1,
-      link: "https://i.ibb.co/qjLPtzY/Screenshot-2447.png",
-      name: "miakyi.com",
-      details: "choose you product",
+      link: "https://i.ibb.co/yyspJfJ/Screenshot-2508.png",
+      name: "https://alphachimneyservice.com/",
+      details: "Protecting Homes with Alpha Chimney Roofing",
     },
     {
       id: 1,
-      link: "https://i.ibb.co/B6rGx9H/Screenshot-2448.png",
-      name: "deskpass.com",
-      details: "collection of product",
+      link: "https://i.ibb.co/Bc3jnwz/Screenshot-2509.png",
+      name: "https://booknookery.vercel.app/",
+      details: "Discover, Buy, and Enjoy Books Easily",
     },
     {
       id: 1,
-      link: "https://i.ibb.co/MVhm4M9/Screenshot-2449.png",
-      name: "alhera.com",
-      details: "making school website",
+      link: "https://i.ibb.co/x3tQ933/Screenshot-2510.png",
+      name: "https://pizzazz-git-main-niaz-abir.vercel.app/",
+      details: "Fresh, Delicious Pizzas Delivered to You",
     },
   ];
 
@@ -52,7 +53,8 @@ const Portfolio = () => {
           Latest Project
         </h1>
         <p className="text-gray-400 text-[18px]">
-          Watch our latest project and except your hope you can enjoy.
+          Watch our latest project and surpass your expectations for an
+          enjoyable experience
         </p>
       </div>
 
@@ -66,15 +68,15 @@ const Portfolio = () => {
           <div className="carousel carousel-center  rounded-box max-w-6xl p-4">
             {allPortfolio?.map((portfolio) => (
               <div key={portfolio?.id} className="max-w-3xl">
-                <div className="carousel-item w-[300px] lg:w-[550px] flex flex-col">
+                <div className="carousel-item  w-[300px] lg:w-[550px] flex flex-col">
                   <img
                     src={portfolio?.link}
-                    className="rounded-box w-[250px] lg:w-[500px]"
+                    className="rounded-box  w-[250px] lg:w-[500px]"
                   />
-                  <h1 className="text-[#c42d82] font-semibold mt-2">
-                    {portfolio?.name}
+                  <h1 className="text-[#c42d82] font-semibold mt-2 ml-2">
+                    <Link href={portfolio?.name}>{portfolio?.name}</Link>
                   </h1>
-                  <h4>{portfolio?.details}</h4>
+                  <h4 className="ml-2">{portfolio?.details}</h4>
                 </div>
               </div>
             ))}

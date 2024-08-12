@@ -2,9 +2,10 @@
 import React, { useState, useEffect } from "react";
 import { GiUbisoftSun } from "react-icons/gi";
 import { MdOutlinePermPhoneMsg } from "react-icons/md";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaMailchimp, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 import { AiOutlineMenuFold } from "react-icons/ai";
+import { SiMailchimp } from "react-icons/si";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,7 +35,7 @@ const Navbar = () => {
       <nav className="mt-2">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <h1 className="flex gap-2 items-center text-2xl">
-            <GiUbisoftSun />
+            <SiMailchimp size={35} />
             <Link href="/">Graphitech Solution</Link>
           </h1>
           <button
@@ -46,7 +47,7 @@ const Navbar = () => {
             aria-expanded={isMenuOpen}
           >
             <span className="sr-only">Open main menu</span>
-            <AiOutlineMenuFold />
+            <AiOutlineMenuFold size={40} />
           </button>
           <div
             className={`${
@@ -92,7 +93,7 @@ const Navbar = () => {
                   href="tel:+880263627"
                   className="p-2 flex items-center gap-2 text-[20px] lg:w-full bg-[#88205b] w-44 text-white rounded md:border-0"
                 >
-                  <MdOutlinePermPhoneMsg /> +1 716 406 7972
+                  <MdOutlinePermPhoneMsg /> +880263627
                 </a>
               </li>
             </ul>
@@ -102,7 +103,7 @@ const Navbar = () => {
       {isScrolled && (
         <div className="fixed bottom-10 right-10 z-50">
           <a
-            href="https://wa.me/+8801617775672"
+            href="https://wa.me/+880 1845-692696"
             target="_blank"
             rel="noopener noreferrer"
             className=" p-3 rounded-full shadow-lg text-white"

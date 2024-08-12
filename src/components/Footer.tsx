@@ -60,9 +60,14 @@ const Footer = () => {
           <h4>Copyright © $2024 - All right reserved</h4>
         </div>
         <div className="flex gap-2">
-          <FaFacebookSquare className="text-3xl " />
+          <Link href="https://www.facebook.com/graphitechsolution2">
+            <FaFacebookSquare className="text-3xl " />
+          </Link>
+
           <FaInstagram className="text-3xl " />
-          <FaLinkedin className="text-3xl " />
+          <Link href="https://www.linkedin.com/company/graphitech-solution/?viewAsMember=true">
+            <FaLinkedin className="text-3xl " />
+          </Link>
         </div>
       </div>
     </motion.div>
