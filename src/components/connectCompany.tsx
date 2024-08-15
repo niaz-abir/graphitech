@@ -71,7 +71,7 @@ export default function ConnectCompany() {
   };
 
   return (
-    <section className="mt-24 mx-4 mb-14 border-t-2 border-[#23131c] border-r-2 border-l-2 overflow-hidden ">
+    <section className="mt-24 mx-4 mb-14 border-t-2 border-[#204964] border-r-2 border-l-2 overflow-hidden ">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -82,13 +82,13 @@ export default function ConnectCompany() {
           <h1 className="text-3xl lg:text-5xl font-bold pb-8">
             Collaborating With Top Industry Experts!
           </h1>
-          <p className="text-gray-400">
+          <p className="text-gray-300">
             Our agency is a nexus for premier partnerships, trusted by over a
             hundred leading brands to create impactful and innovative
             collaborations. Experience the synergy of creativity and strategy in
             our portfolio of successful projects.
           </p>
-          <button className="w-32 h-14 mt-4 pl-2  btn-outline border-none rounded-md text-[18px] text-white font-bold transition-all duration-300 hover:bg-[#23131c] bg-[#88205b]">
+          <button className="w-32 h-14 mt-4 pl-2  btn-outline border-none rounded-md text-[18px] text-white font-bold transition-all duration-300 bg-gradient-to-r from-[#c4672d] to-[#da5d10]">
             <Link href="contact-us" className="flex gap-2 items-center">
               Let's Talk <MdOutlineWavingHand />
             </Link>

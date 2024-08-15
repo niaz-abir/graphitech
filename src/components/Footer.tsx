@@ -19,7 +19,7 @@ const Footer = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}
       viewport={{ once: true, amount: 0.3 }}
-      className="mt-20 pb-6 shadow-2xl  border-t-2 border-[#23131c] shadow-[#23131c]"
+      className="mt-20 pb-6 shadow-2xl  border-t-2 border-[#204964] shadow-[#23131c]"
     >
       <footer className="footer text-white p-10">
         <div>
@@ -27,7 +27,7 @@ const Footer = () => {
           <h1 className="text-[25px] font-bold">
             Let Your Business Soar High"
           </h1>
-          <button className="p-4 mt-4 pl-2  btn-outline border-none rounded-md text-[18px] text-white font-bold transition-all duration-300 hover:bg-[#23131c] bg-[#88205b]">
+          <button className="p-4 mt-4 pl-2  btn-outline border-none rounded-md text-[18px] text-white font-bold transition-all duration-300 bg-gradient-to-r from-[#c4672d] to-[#da5d10] ">
             <Link href="contact-us" className="pt-2">
               Let's Connect
             </Link>
@@ -36,13 +36,13 @@ const Footer = () => {
 
         <nav className="font-semibold text-[16px]">
           <h6 className="font-bold text-white text-[18px]">Services</h6>
-          <a className="link link-hover text-gray-400">Branding</a>
-          <a className="link link-hover text-gray-400">Design</a>
-          <a className="link link-hover text-gray-400">Development</a>
-          <a className="link link-hover text-gray-400">Marketing</a>
-          <a className="link link-hover text-gray-400">Advertisement</a>
+          <a className="link link-hover text-gray-300">Development</a>
+          <a className="link link-hover text-gray-300">Design</a>
+          <a className="link link-hover text-gray-300">Marketing</a>
+          <a className="link link-hover text-gray-300">Branding</a>
+          <a className="link link-hover text-gray-300">Advertisement</a>
         </nav>
-        <nav className="font-semibold text-[16px] text-gray-400">
+        <nav className="font-semibold text-[16px] text-gray-300">
           <h6 className="font-bold text-white text-[18px]">Company</h6>
           <a className="link link-hover">About us</a>
           <a className="link link-hover">Contact</a>
@@ -53,6 +53,8 @@ const Footer = () => {
           <h6 className="font-semibold text-[16px]">Address</h6>
           <p className="text-[20px]"> 1300 Elmwood Avenue,</p>
           <p className="text-[20px]"> Buffalo, NY 14222, USA</p>
+          <h6 className="font-semibold text-[16px] pt-2">Number:</h6>
+          <p className="text-[20px]"> +1 716 406 7972</p>
         </nav>
       </footer>
       <div className="flex justify-between p-2">
@@ -63,8 +65,8 @@ const Footer = () => {
           <Link href="https://www.facebook.com/graphitechsolution2">
             <FaFacebookSquare className="text-3xl " />
           </Link>
+          <FaInstagram className="text-3xl" />
 
-          <FaInstagram className="text-3xl " />
           <Link href="https://www.linkedin.com/company/graphitech-solution/?viewAsMember=true">
             <FaLinkedin className="text-3xl " />
           </Link>
