@@ -25,7 +25,7 @@ export function Banner() {
               </button>
             </Link>
 
-            <button className="w-28 h-14 rounded-md text-white text-[18px] font-bold  transition-all duration-300   bg-[#2e6c96] ">
+            <button className="  w-40 h-14 rounded-md text-white text-[18px] font-bold  transition-all duration-300   bg-[#2e6c96] ">
               Book A Meeting
             </button>
           </div>
