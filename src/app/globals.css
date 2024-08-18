@@ -4,10 +4,12 @@
 
 html,
 body {
-  background: linear-gradient(335deg, #100f0f, #240617, #100f0f);
+  background: linear-gradient(to right, #12202e, #2c4f73, #132836);
   color: white;
-  height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
 }
+
+/*   background: linear-gradient(435deg, #1e3d73, #240617, #1b4e85); */
+/* background: linear-gradient(435deg, #1e3864, #2c4f73, #112f4f); */

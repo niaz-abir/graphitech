@@ -2,11 +2,14 @@
 "use client";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm, SubmitHandler, Controller } from "react-hook-form";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 type TInput = {
   user_name: string;
   user_email: string;
+  user_number: string;
   user_message: string;
 };
 
@@ -15,12 +18,14 @@ const ContactUs = () => {
     register,
     handleSubmit,
     reset,
+    setValue,
+    control,
     formState: { errors },
   } = useForm<TInput>();
   const form = useRef<HTMLFormElement>(null);
 
   const onSubmit: SubmitHandler<TInput> = (data) => {
-    // console.log(data);
+    console.log(data);
     if (form.current) {
       emailjs
         .sendForm("servicegraphitech", "template_ulg1uq6", form.current, {
@@ -44,15 +49,15 @@ const ContactUs = () => {
     <section>
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-4 lg:py-8">
         <div className="mb-4">
-          <div className="mb-4 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
-            <h2 className="font-heading mb-4 font-bold tracking-tight text-white dark:text-white text-3xl sm:text-5xl">
+          <div className="mb-4 max-w-3xl text-center sm:text-center md:mx-auto ">
+            <h2 className="font-heading mb-4 font-bold tracking-tight text-white dark:text-white text-2xl lg:text-4xl">
               Get in Touch
             </h2>
           </div>
         </div>
-        <div className="flex items-stretch justify-center">
-          <div className="grid md:grid-cols-2">
-            <div className="h-full pr-6 mt-8 ">
+        <div className="flex items-stretch  justify-center">
+          <div className="grid md:grid-cols-2 items-center mt-4 ">
+            <div className="h-full p-4 lg:pr-6 mt-2 lg:mt-4 ">
               <p className="mt-3 mb-12 text-lg text-white dark:text-slate-400">
                 We’d love to hear from you! Whether you have questions,
                 feedback, or need support, our team is here to help. Fill out
@@ -62,7 +67,7 @@ const ContactUs = () => {
               </p>
               <ul className="mb-6 md:mb-0">
                 <li className="flex">
-                  <div className="flex h-10 w-10 items-center justify-center rounded bg-pink-700 text-gray-50">
+                  <div className="flex h-10 w-10 items-center justify-center rounded bg-[#da5d10] text-gray-50">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -92,7 +97,7 @@ const ContactUs = () => {
                   </div>
                 </li>
                 <li className="flex">
-                  <div className="flex h-10 w-10 items-center justify-center rounded bg-pink-700 text-gray-50">
+                  <div className="flex h-10 w-10 items-center justify-center rounded bg-[#da5d10] text-gray-50">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -123,7 +128,7 @@ const ContactUs = () => {
                   </div>
                 </li>
                 <li className="flex">
-                  <div className="flex h-10 w-10 items-center justify-center rounded bg-pink-700 text-gray-50">
+                  <div className="flex h-10 w-10 items-center justify-center rounded bg-[#da5d10] text-gray-50">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -151,85 +156,114 @@ const ContactUs = () => {
                 </li>
               </ul>
             </div>
+
             <div>
-              <div className="text-white relative px-2 p-4 bg-[#23131c] shadow-lg sm:rounded-3xl sm:p-16">
-                <div className="text-center pb-4 -mt-4 ">
-                  <h1 className="text-3xl font-bold">Contact Us!</h1>
+              <div className="text-white relative px-2 p-4 bg-[#17334e] rounded-md shadow-lg sm:rounded-3xl ">
+                <div className="text-center pb-4 -mt-4">
+                  <h1 className="text-3xl font-bold pt-4">Contact Us!</h1>
 
                   <p className="text-gray-300">
                     Fill up the form below to send us a message.
                   </p>
                 </div>
+                <div className="flex justify-center ">
+                  <form ref={form} onSubmit={handleSubmit(onSubmit)}>
+                    <label className="form-control w-full max-w-xs">
+                      <div className="label">
+                        <span className="text-white">Name:</span>
+                      </div>
+                      <input
+                        type="text"
+                        placeholder="name"
+                        className={`input input-bordered bg-[#1a2f45] w-[350px]  lg:w-[450px] ${
+                          errors.user_name ? "border-red-500" : ""
+                        }`}
+                        {...register("user_name", {
+                          required: "Name is required",
+                        })}
+                      />
+                    </label>
+                    {errors.user_name && (
+                      <p className="text-red-500 text-sm">
+                        {errors.user_name.message}
+                      </p>
+                    )}
 
-                <form ref={form} onSubmit={handleSubmit(onSubmit)}>
-                  <label className="form-control w-full max-w-xs">
-                    <div className="label">
-                      <span className="text-white">Name:</span>
-                    </div>
-                    <input
-                      type="text"
-                      placeholder="name"
-                      className={`input input-bordered bg-[#44363e] w-[450px] ${
-                        errors.user_name ? "border-red-500" : ""
-                      }`}
-                      {...register("user_name", {
-                        required: "Name is required",
-                      })}
-                    />
-                  </label>
-                  {errors.user_name && (
-                    <p className="text-red-500 text-sm">
-                      {errors.user_name.message}
-                    </p>
-                  )}
+                    {/* Phone Number with Country Code */}
 
-                  <label className="form-control w-full max-w-xs">
-                    <div className="label">
-                      <span className="text-white">Email:</span>
-                    </div>
-                    <input
-                      required
-                      type="text"
-                      placeholder="email"
-                      className={`input input-bordered bg-[#44363e] w-[450px] ${
-                        errors.user_email ? "border-red-500" : ""
-                      }`}
-                      {...register("user_email", {
-                        required: "email is required",
-                      })}
-                    />
-                  </label>
-                  {errors.user_email && (
-                    <p className="text-red-500 text-sm">
-                      {errors.user_email.message}
-                    </p>
-                  )}
-                  <label className="form-control">
-                    <div className="label">
-                      <span className="text-white ">Message:</span>
-                    </div>
-                    <textarea
-                      className={` textarea textarea-bordered h-24  bg-[#44363e] w-[450px] ${
-                        errors.user_message ? "border-red-500" : ""
-                      }`}
-                      {...register("user_message", {
-                        required: "message is required",
-                      })}
-                      placeholder="message"
-                    ></textarea>
-                  </label>
-                  {errors.user_message && (
-                    <p className="text-red-500 text-sm">
-                      {errors.user_message.message}
-                    </p>
-                  )}
+                    <label className="form-control w-full max-w-xs">
+                      <div className="label">
+                        <span className="text-white">Email:</span>
+                      </div>
+                      <input
+                        required
+                        type="text"
+                        placeholder="email"
+                        className={`input input-bordered bg-[#1a2f45] w-[350px]  lg:w-[450px] ${
+                          errors.user_email ? "border-red-500" : ""
+                        }`}
+                        {...register("user_email", {
+                          required: "email is required",
+                        })}
+                      />
+                    </label>
+                    {errors.user_email && (
+                      <p className="text-red-500 text-sm">
+                        {errors.user_email.message}
+                      </p>
+                    )}
+                    <label className="form-control w-full max-w-xs">
+                      <div className="label">
+                        <span className="text-white">Number:</span>
+                      </div>
+                      <PhoneInput
+                        country={"us"}
+                        value={""}
+                        inputClass="w-[350px] lg:w-[450px] bg-[#1a2f45] border-none"
+                        buttonClass="flag-dropdown   bg-[#1a2f45]"
+                        onChange={(phone) => setValue("user_number", phone)}
+                        inputStyle={{
+                          backgroundColor: "#1a2f45",
+                          border: "none",
+                          width: "100%",
+                          height: "50px", // Makes input field full-width on mobile
+                          maxWidth: "700px", // Maximum width for larger screens
+                        }}
+                      />
+                    </label>
+                    {errors.user_number && (
+                      <p className="text-red-500 text-sm">
+                        {errors.user_number.message}
+                      </p>
+                    )}
 
-                  <div className="mt-4 mb-4">
-                    <button className="w-[450px] h-14 btn-outline border-none duration-300 rounded-md text-[18px] text-white font-bold hover:bg-[#23131c] bg-[#532a41]">
-                      Submit
-                    </button>
-                  </div>
-                </form>
+                    <label className="form-control">
+                      <div className="label">
+                        <span className="text-white ">Message:</span>
+                      </div>
+                      <textarea
+                        className={` textarea textarea-bordered h-24  bg-[#1a2f45] w-[350px]  lg:w-[450px] ${
+                          errors.user_message ? "border-red-500" : ""
+                        }`}
+                        {...register("user_message", {
+                          required: "message is required",
+                        })}
+                        placeholder="message"
+                      ></textarea>
+                    </label>
+                    {errors.user_message && (
+                      <p className="text-red-500 text-sm">
+                        {errors.user_message.message}
+                      </p>
+                    )}
+
+                    <div className="mt-4 mb-4">
+                      <button className="w-[350px]  lg:w-[450px] h-14 btn-outline border-none duration-300 rounded-md text-[18px] text-white font-bold hover:bg-[#2a4f75] bg-[#1a2f45]">
+                        Submit
+                      </button>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>

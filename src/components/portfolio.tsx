@@ -47,12 +47,12 @@ const Portfolio = () => {
   ];
 
   return (
-    <section className="mt-14 bg-[#23131c] p-8 rounded-md ">
+    <section id="project" className="mt-14 bg-[#1a2f45] p-8 rounded-md ">
       <div className="text-center pb-6">
         <h1 className="font-bold text-center pt-6 text-4xl pb-6">
           Latest Project
         </h1>
-        <p className="text-gray-400 text-[18px]">
+        <p className="text-gray-300 text-[18px]">
           Watch our latest project and surpass your expectations for an
           enjoyable experience
         </p>
@@ -73,7 +73,7 @@ const Portfolio = () => {
                     src={portfolio?.link}
                     className="rounded-box  w-[250px] lg:w-[500px]"
                   />
-                  <h1 className="text-[#c42d82] font-semibold mt-2 ml-2">
+                  <h1 className="text-[#F37021] font-semibold mt-2 ml-2">
                     <Link href={portfolio?.name}>{portfolio?.name}</Link>
                   </h1>
                   <h4 className="ml-2">{portfolio?.details}</h4>

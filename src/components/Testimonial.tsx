@@ -10,9 +10,9 @@ const Testimonial = () => {
         <div className="flex items-center justify-center flex-col mb-8 gap-y-2 py-5">
           <h2 className="text-2xl lg:text-4xl font-bold  text-center text-white">
             Heres what our
-            <span className="text-pink-400"> customers</span> have to say
+            <span className="text-[#e67c3b] "> customers</span> have to say
           </h2>
-          <p className="text-lg font-medium text-slate-400/70">
+          <p className="text-[18px] font-medium text-gray-300">
             Discover how our service can benefit you have grow.
           </p>
         </div>
@@ -22,7 +22,7 @@ const Testimonial = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true, amount: 0.3 }}
-            className="border p-7 rounded-xl bg-[#381f2d] drop-shadow-md border-neutral-800/50 col-span-2 flex flex-col gap-y-10 justify-between"
+            className="border p-7 rounded-xl bg-[#1a2f45] drop-shadow-md border-neutral-800/50 col-span-2 flex flex-col gap-y-10 justify-between"
           >
             <div className="flex flex-col gap-y-3.5">
               <p className="font-bold text-xl text-white">
@@ -52,7 +52,7 @@ const Testimonial = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true, amount: 0.3 }}
-            className="border p-7 rounded-xl bg-[#381f2d] drop-shadow-md border-neutral-800/50 col-span-3 flex flex-col gap-y-10 justify-between"
+            className="border p-7 rounded-xl bg-[#1a2f45] drop-shadow-md border-neutral-800/50 col-span-3 flex flex-col gap-y-10 justify-between"
           >
             <div className="flex flex-col gap-y-3.5">
               <p className="font-bold text-xl text-white">
@@ -83,7 +83,7 @@ const Testimonial = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true, amount: 0.3 }}
-            className="border p-7 rounded-xl bg-[#381f2d] drop-shadow-md border-neutral-800/50 col-span-3 flex flex-col gap-y-10 justify-between"
+            className="border p-7 rounded-xl bg-[#1a2f45] drop-shadow-md border-neutral-800/50 col-span-3 flex flex-col gap-y-10 justify-between"
           >
             <div className="flex flex-col gap-y-3.5">
               <p className="font-bold text-xl text-white">
@@ -113,7 +113,7 @@ const Testimonial = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true, amount: 0.3 }}
-            className="border p-7 rounded-xl bg-[#381f2d] drop-shadow-md border-neutral-800/50 col-span-2 flex flex-col gap-y-10 justify-between"
+            className="border p-7 rounded-xl bg-[#1a2f45] drop-shadow-md border-neutral-800/50 col-span-2 flex flex-col gap-y-10 justify-between"
           >
             <div className="flex flex-col gap-y-3.5">
               <p className="font-bold text-xl text-white">

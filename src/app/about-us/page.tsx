@@ -46,9 +46,9 @@ const AboutUs = () => {
             />
           </div>
 
-          <div className="max-w-lg bg-[#23131c] rounded-md md:max-w-2xl md:z-10 md:shadow-lg md:absolute md:top-0 md:mt-48 lg:w-3/5 lg:left-0 lg:mt-20 lg:ml-20 xl:mt-24 xl:ml-12">
+          <div className="max-w-lg bg-[#1c2f42] rounded-md md:max-w-2xl md:z-10 md:shadow-lg md:absolute md:top-0 md:mt-48 lg:w-3/5 lg:left-0 lg:mt-20 lg:ml-20 xl:mt-24 xl:ml-12">
             <div className="flex flex-col p-6 md:px-16">
-              <h2 className="text-2xl font-bold uppercase text-pink-600 lg:text-4xl">
+              <h2 className="text-2xl font-bold uppercase text-[#da5d10] lg:text-4xl">
                 Meet Our Team
               </h2>
               <p className="mt-4">
@@ -59,7 +59,7 @@ const AboutUs = () => {
               </p>
 
               <div className="mt-8">
-                <button className="w-32 pl-2 h-14 btn-outline border-none rounded-md text-[18px] text-white font-bold  hover:bg-[#23131c] bg-[#88205b]">
+                <button className="w-32 pl-2 h-14 btn-outline border-none rounded-md text-[18px] text-white font-bold  bg-gradient-to-r  from-[#c4672d] to-[#da5d10]">
                   <Link href="contact-us" className="flex gap-2 items-center">
                     Let's Talk <MdOutlineWavingHand />
                   </Link>
