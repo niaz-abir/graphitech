@@ -2,9 +2,7 @@
 "use client";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { useForm, SubmitHandler, Controller } from "react-hook-form";
-import PhoneInput from "react-phone-input-2";
-import "react-phone-input-2/lib/style.css";
+import { useForm, SubmitHandler } from "react-hook-form";
 
 type TInput = {
   user_name: string;
@@ -189,8 +187,6 @@ const ContactUs = () => {
                       </p>
                     )}
 
-                    {/* Phone Number with Country Code */}
-
                     <label className="form-control w-full max-w-xs">
                       <div className="label">
                         <span className="text-white">Email:</span>
@@ -212,31 +208,6 @@ const ContactUs = () => {
                         {errors.user_email.message}
                       </p>
                     )}
-                    <label className="form-control w-full max-w-xs">
-                      <div className="label">
-                        <span className="text-white">Number:</span>
-                      </div>
-                      <PhoneInput
-                        country={"us"}
-                        value={""}
-                        inputClass="w-[350px] lg:w-[450px] bg-[#1a2f45] border-none"
-                        buttonClass="flag-dropdown   bg-[#1a2f45]"
-                        onChange={(phone) => setValue("user_number", phone)}
-                        inputStyle={{
-                          backgroundColor: "#1a2f45",
-                          border: "none",
-                          width: "100%",
-                          height: "50px", // Makes input field full-width on mobile
-                          maxWidth: "700px", // Maximum width for larger screens
-                        }}
-                      />
-                    </label>
-                    {errors.user_number && (
-                      <p className="text-red-500 text-sm">
-                        {errors.user_number.message}
-                      </p>
-                    )}
-
                     <label className="form-control">
                       <div className="label">
                         <span className="text-white ">Message:</span>
